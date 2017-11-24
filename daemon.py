@@ -28,8 +28,8 @@ def create_empty_file():
 
     now = datetime.now().strftime('%Y%m%d%H%M%S')
 
-    filepath = os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                            f'tmp/{now}.txt')
+    filepath = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), f'tmp/{now}.txt')
 
     with open(filepath, 'w') as f:
         f.write(str(os.getpid()))
